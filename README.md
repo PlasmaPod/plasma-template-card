@@ -27,13 +27,13 @@ The goal of Template Card is to provide a custom template card and badge for ult
 
 ## Installation
 
-### HACS (Easy Mode)
+<!--### HACS (Easy Mode)
 
 Plasma Template Card is available in [HACS][hacs] (Home Assistant Community Store).
 
 Use this link to directly go to the repository in HACS
 
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=plasmapod&repository=plasma-template-card)
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=plasmapod&repository=plasma-template-card)-->
 
 ### HACS (Manual Mode)
 1. Install HACS if you don't have it already
