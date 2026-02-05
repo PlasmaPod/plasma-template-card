@@ -23,7 +23,7 @@ import "../shared/shape-icon";
 import "../shared/state-info";
 import "../shared/state-item";
 import { computeAppearance } from "./appearance";
-import { MushroomBaseElement } from "./base-element";
+import { PlasmaBaseElement } from "./base-element";
 import { computeInfoDisplay } from "./info";
 
 type BaseConfig = EntitySharedConfig & AppearanceSharedConfig;
@@ -32,10 +32,10 @@ export function computeDarkMode(hass?: HomeAssistant): boolean {
   if (!hass) return false;
   return (hass.themes as any).darkMode as boolean;
 }
-export class MushroomBaseCard<
+export class PlasmaBaseCard<
   T extends BaseConfig = BaseConfig,
   E extends HassEntity = HassEntity,
-> extends MushroomBaseElement {
+> extends PlasmaBaseElement {
   @state() protected _config?: T;
 
   @property({ reflect: true, type: String })
@@ -222,10 +222,10 @@ export class MushroomBaseCard<
 
   protected renderPicture(picture: string): TemplateResult {
     return html`
-      <mushroom-shape-avatar
+      <plasma-shape-avatar
         slot="icon"
         .picture_url=${(this.hass as any).hassUrl(picture)}
-      ></mushroom-shape-avatar>
+      ></plasma-shape-avatar>
     `;
   }
 
@@ -239,23 +239,23 @@ export class MushroomBaseCard<
       <ha-card
         class=${classMap({ "fill-container": appearance.fill_container })}
       >
-        <mushroom-card .appearance=${appearance} ?rtl=${rtl}>
-          <mushroom-state-item ?rtl=${rtl} .appearance=${appearance} disabled>
-            <mushroom-shape-icon slot="icon" disabled>
+        <plasma-card .appearance=${appearance} ?rtl=${rtl}>
+          <plasma-state-item ?rtl=${rtl} .appearance=${appearance} disabled>
+            <plasma-shape-icon slot="icon" disabled>
               <ha-icon icon="mdi:help"></ha-icon>
-            </mushroom-shape-icon>
-            <mushroom-badge-icon
+            </plasma-shape-icon>
+            <plasma-badge-icon
               slot="badge"
               class="not-found"
               icon="mdi:exclamation-thick"
-            ></mushroom-badge-icon>
-            <mushroom-state-info
+            ></plasma-badge-icon>
+            <plasma-state-info
               slot="info"
               .primary=${config.entity}
               .secondary=${customLocalize("card.not_found")}
-            ></mushroom-state-info>
-          </mushroom-state-item>
-        </mushroom-card>
+            ></plasma-state-info>
+          </plasma-state-item>
+        </plasma-card>
       </ha-card>
     `;
   }
@@ -263,13 +263,13 @@ export class MushroomBaseCard<
   protected renderIcon(stateObj: HassEntity, icon?: string): TemplateResult {
     const active = isActive(stateObj);
     return html`
-      <mushroom-shape-icon slot="icon" .disabled=${!active}>
+      <plasma-shape-icon slot="icon" .disabled=${!active}>
         <ha-state-icon
           .hass=${this.hass}
           .stateObj=${stateObj}
           .icon=${icon}
         ></ha-state-icon
-      ></mushroom-shape-icon>
+      ></plasma-shape-icon>
     `;
   }
 
@@ -277,11 +277,11 @@ export class MushroomBaseCard<
     const unavailable = !isAvailable(stateObj);
     return unavailable
       ? html`
-          <mushroom-badge-icon
+          <plasma-badge-icon
             class="unavailable"
             slot="badge"
             icon="mdi:help"
-          ></mushroom-badge-icon>
+          ></plasma-badge-icon>
         `
       : nothing;
   }
@@ -313,11 +313,11 @@ export class MushroomBaseCard<
     );
 
     return html`
-      <mushroom-state-info
+      <plasma-state-info
         slot="info"
         .primary=${primary}
         .secondary=${secondary}
-      ></mushroom-state-info>
+      ></plasma-state-info>
     `;
   }
 }

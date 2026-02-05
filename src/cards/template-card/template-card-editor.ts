@@ -57,8 +57,8 @@ export const TEMPLATE_CARD_HELPERS = [
   "multiline_secondary",
 ];
 
-@customElement("mushroom-template-card-editor")
-export class MushroomTemplateCardEditor
+@customElement("plasma-template-card-editor")
+export class PlasmaTemplateCardEditor
   extends LitElement
   implements LovelaceCardEditor
 {
@@ -77,7 +77,7 @@ export class MushroomTemplateCardEditor
     assert(config, templateCardConfigStruct);
     if (templateCardNeedsMigration(config)) {
       this._legacyConfig = { ...config };
-      this._legacyConfig.type = "custom:mushroom-legacy-template-card";
+      this._legacyConfig.type = "custom:plasma-legacy-template-card";
     } else {
       delete this._legacyConfig;
     }
@@ -507,6 +507,6 @@ export class MushroomTemplateCardEditor
 
 declare global {
   interface HTMLElementTagNameMap {
-    "mushroom-template-card-editor": MushroomTemplateCardEditor;
+    "plasma-template-card-editor": PlasmaTemplateCardEditor;
   }
 }

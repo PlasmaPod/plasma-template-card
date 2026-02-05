@@ -8,7 +8,7 @@ import {
 } from "lit";
 import { customElement, property } from "lit/decorators.js";
 
-@customElement("mushroom-state-info")
+@customElement("plasma-state-info")
 export class StateItem extends LitElement {
   @property({ attribute: false }) public primary?: string | TemplateResult<1>;
 

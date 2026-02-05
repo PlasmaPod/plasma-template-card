@@ -2,7 +2,7 @@ import { css, CSSResultGroup, html, LitElement } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { HomeAssistant } from "../../ha";
 import setupCustomlocalize from "../../localize";
-import "./../form/mushroom-select";
+import "./../form/plasma-select";
 
 const ALIGNMENT = ["default", "start", "center", "end", "justify"] as const;
 type Alignment = (typeof ALIGNMENT)[number];
@@ -15,7 +15,7 @@ const ICONS: Record<Alignment, string> = {
   justify: "mdi:format-align-justify",
 };
 
-@customElement("mushroom-alignment-picker")
+@customElement("plasma-alignment-picker")
 export class AlignmentPicker extends LitElement {
   @property() public label = "";
 
@@ -44,7 +44,7 @@ export class AlignmentPicker extends LitElement {
     const value = this.value || "default";
 
     return html`
-      <mushroom-select
+      <plasma-select
         icon
         .label=${this.label}
         .configValue=${this.configValue}
@@ -65,13 +65,13 @@ export class AlignmentPicker extends LitElement {
             </mwc-list-item>
           `;
         })}
-      </mushroom-select>
+      </plasma-select>
     `;
   }
 
   static get styles(): CSSResultGroup {
     return css`
-      mushroom-select {
+      plasma-select {
         width: 100%;
       }
     `;

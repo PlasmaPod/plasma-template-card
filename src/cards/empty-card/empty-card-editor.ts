@@ -2,7 +2,7 @@ import { html } from "lit";
 import { customElement, state } from "lit/decorators.js";
 import { LovelaceCardEditor } from "../../ha";
 import setupCustomlocalize from "../../localize";
-import { MushroomBaseElement } from "../../utils/base-element";
+import { PlasmaBaseElement } from "../../utils/base-element";
 import { HaFormSchema } from "../../utils/form/ha-form";
 import { EMPTY_CARD_EDITOR_NAME } from "./const";
 import { EmptyCardConfig } from "./empty-card-config";
@@ -15,7 +15,7 @@ const SCHEMA: HaFormSchema[] = [
 ];
 
 @customElement(EMPTY_CARD_EDITOR_NAME)
-export class EntityCardEditor extends MushroomBaseElement implements LovelaceCardEditor {
+export class EntityCardEditor extends PlasmaBaseElement implements LovelaceCardEditor {
   @state() private _config?: EmptyCardConfig;
 
   public setConfig(): void {

@@ -40,7 +40,7 @@ export const cardStyle = css`
   .not-found {
     --main-color: rgb(var(--rgb-danger));
   }
-  mushroom-state-item[disabled] {
+  plasma-state-item[disabled] {
     cursor: initial;
   }
 `;

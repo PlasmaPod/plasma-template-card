@@ -37,20 +37,20 @@ type TemplateResults = Partial<
 >;
 
 registerCustomBadge({
-  type: "mushroom-template-badge",
-  name: "Mushroom Template",
+  type: "plasma-template-badge",
+  name: "Plasma Template Badge",
   description: "Build your own badge using templates",
 });
 
 const TEMPLATE_KEYS = ["icon", "color", "label", "content", "picture"] as const;
 type TemplateKey = (typeof TEMPLATE_KEYS)[number];
 
-@customElement("mushroom-template-badge")
-export class MushroomTemplateBadge extends LitElement implements LovelaceBadge {
+@customElement("plasma-template-badge")
+export class PlasmaTemplateBadge extends LitElement implements LovelaceBadge {
   public static async getConfigElement(): Promise<LovelaceBadgeEditor> {
     await import("./template-badge-editor");
     return document.createElement(
-      "mushroom-template-badge-editor"
+      "plasma-template-badge-editor"
     ) as LovelaceBadgeEditor;
   }
 
@@ -58,10 +58,10 @@ export class MushroomTemplateBadge extends LitElement implements LovelaceBadge {
     _hass: HomeAssistant
   ): Promise<TemplateBadgeConfig> {
     return {
-      type: `custom:mushroom-template-badge`,
+      type: `custom:plasma-template-badge`,
       content: "Hello",
-      icon: "mdi:mushroom",
-      color: "red",
+      icon: "mdi:rocket",
+      color: "blue",
     };
   }
 
@@ -419,6 +419,6 @@ export class MushroomTemplateBadge extends LitElement implements LovelaceBadge {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "mushroom-template-badge": MushroomTemplateBadge;
+    "plasma-template-badge": PlasmaTemplateBadge;
   }
 }

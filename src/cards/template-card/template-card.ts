@@ -43,9 +43,9 @@ export const getEntityDefaultTileIconAction = (entityId: string) => {
 };
 
 registerCustomCard({
-  type: "mushroom-template-card",
-  name: "Mushroom Template",
-  description: "Build your own Mushroom card using templates",
+  type: "plasma-template-card",
+  name: "Plasma Template",
+  description: "Build your own Plasma card using templates",
 });
 
 const templateCache = new CacheManager<TemplateResults>(1000);
@@ -72,21 +72,21 @@ export interface LovelaceCardFeatureContext {
   area_id?: string;
 }
 
-@customElement("mushroom-template-card")
-export class MushroomTemplateCard extends LitElement implements LovelaceCard {
+@customElement("plasma-template-card")
+export class PlasmaTemplateCard extends LitElement implements LovelaceCard {
   public static async getConfigElement(): Promise<LovelaceCardEditor> {
     await import("./template-card-editor");
     return document.createElement(
-      "mushroom-template-card-editor"
+      "plasma-template-card-editor"
     ) as LovelaceCardEditor;
   }
 
   public static getStubConfig(): TemplateCardConfig {
     return {
-      type: `custom:mushroom-template-card`,
+      type: `custom:plasma-template-card`,
       primary: "Hello, {{user}}",
       secondary: "How are you?",
-      icon: "mdi:mushroom",
+      icon: "mdi:rocket",
     };
   }
 
@@ -701,6 +701,6 @@ export class MushroomTemplateCard extends LitElement implements LovelaceCard {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "mushroom-template-card": MushroomTemplateCard;
+    "plasma-template-card": PlasmaTemplateCard;
   }
 }

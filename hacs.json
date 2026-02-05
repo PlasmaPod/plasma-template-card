@@ -1,6 +1,6 @@
 {
-  "name": "Mushroom",
-  "filename": "mushroom.js",
+  "name": "Plasma Template Card",
+  "filename": "plasma-template-card.js",
   "homeassistant": "2025.6",
   "render_readme": true
 }

@@ -3,9 +3,9 @@ import { customElement, property } from "lit/decorators.js";
 import { HomeAssistant } from "../../ha";
 import setupCustomlocalize from "../../localize";
 import { Info, INFOS } from "../../utils/info";
-import "./../form/mushroom-select";
+import "./../form/plasma-select";
 
-@customElement("mushroom-info-picker")
+@customElement("plasma-info-picker")
 export class InfoPicker extends LitElement {
   @property() public label = "";
 
@@ -34,7 +34,7 @@ export class InfoPicker extends LitElement {
     const customLocalize = setupCustomlocalize(this.hass);
 
     return html`
-      <mushroom-select
+      <plasma-select
         .label=${this.label}
         .configValue=${this.configValue}
         @selected=${this._selectChanged}
@@ -54,13 +54,13 @@ export class InfoPicker extends LitElement {
             </mwc-list-item>
           `;
         })}
-      </mushroom-select>
+      </plasma-select>
     `;
   }
 
   static get styles(): CSSResultGroup {
     return css`
-      mushroom-select {
+      plasma-select {
         width: 100%;
       }
     `;

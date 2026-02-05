@@ -3,9 +3,9 @@ import { customElement, property } from "lit/decorators.js";
 import { HomeAssistant } from "../../ha";
 import setupCustomlocalize from "../../localize";
 import { ICON_TYPES } from "../../utils/info";
-import "../form/mushroom-select";
+import "../form/plasma-select";
 
-@customElement("mushroom-icon-type-picker")
+@customElement("plasma-icon-type-picker")
 export class IconTypePicker extends LitElement {
   @property() public label = "";
 
@@ -32,7 +32,7 @@ export class IconTypePicker extends LitElement {
     const customLocalize = setupCustomlocalize(this.hass);
 
     return html`
-      <mushroom-select
+      <plasma-select
         .label=${this.label}
         .configValue=${this.configValue}
         @selected=${this._selectChanged}
@@ -53,13 +53,13 @@ export class IconTypePicker extends LitElement {
             </mwc-list-item>
           `;
         })}
-      </mushroom-select>
+      </plasma-select>
     `;
   }
 
   static get styles(): CSSResultGroup {
     return css`
-      mushroom-select {
+      plasma-select {
         width: 100%;
       }
     `;

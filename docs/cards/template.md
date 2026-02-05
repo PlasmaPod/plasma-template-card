@@ -47,10 +47,6 @@ All options are available in the **Lovelace editor**, but you can also configure
 
 ---
 
-## Theming
-
-This card is not compatible with Mushroom themes because it based on the official [Tile card](https://www.home-assistant.io/dashboards/tile/). If you want a theme compatible card, use the [Legacy Template Card](./legacy-template.md).
-
 ## Available Colors
 
 You can use **color tokens** (theme-aware) or regular **hexadecimal colors**.
@@ -115,7 +111,7 @@ You can use **color tokens** (theme-aware) or regular **hexadecimal colors**.
 ## Example YAML
 
 ```yaml
-type: custom:mushroom-template-card
+type: custom:plasma-template-card
 entity: light.living_room_floor_lamp
 area: living_room
 icon: mdi:lightbulb

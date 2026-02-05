@@ -1,19 +1,19 @@
 import { ActionConfig } from "../../ha";
-import { MushAlignementSelector } from "./custom/ha-selector-mushroom-alignment";
-import { MushColorSelector } from "./custom/ha-selector-mushroom-color";
-import { MushIconTypeSelector } from "./custom/ha-selector-mushroom-icon-type";
-import { MushInfoSelector } from "./custom/ha-selector-mushroom-info";
-import { MushLayoutSelector } from "./custom/ha-selector-mushroom-layout";
+import { PlasmaAlignementSelector } from "./custom/ha-selector-plasma-alignment";
+import { PlasmaColorSelector } from "./custom/ha-selector-plasma-color";
+import { PlasmaIconTypeSelector } from "./custom/ha-selector-plasma-icon-type";
+import { PlasmaInfoSelector } from "./custom/ha-selector-plasma-info";
+import { PlasmaLayoutSelector } from "./custom/ha-selector-plasma-layout";
 
-type MushSelector =
-  | MushColorSelector
-  | MushLayoutSelector
-  | MushInfoSelector
-  | MushIconTypeSelector
-  | MushAlignementSelector;
+type PlasmaSelector =
+  | PlasmaColorSelector
+  | PlasmaLayoutSelector
+  | PlasmaInfoSelector
+  | PlasmaIconTypeSelector
+  | PlasmaAlignementSelector;
 
 export type Selector =
-  | MushSelector
+  | PlasmaSelector
   | ActionSelector
   | AddonSelector
   | AreaSelector

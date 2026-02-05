@@ -5,19 +5,19 @@ import {
   LovelaceCardEditor,
   type LovelaceGridOptions,
 } from "../../ha";
-import { MushroomBaseElement } from "../../utils/base-element";
+import { PlasmaBaseElement } from "../../utils/base-element";
 import { registerCustomCard } from "../../utils/custom-cards";
 import { EMPTY_CARD_EDITOR_NAME, EMPTY_CARD_NAME } from "./const";
 
 registerCustomCard({
   type: EMPTY_CARD_NAME,
-  name: "Mushroom Empty Card",
+  name: "Plasma Empty Card",
   description:
     "The empty card allows you to add a placeholder between your cards.",
 });
 
 @customElement(EMPTY_CARD_NAME)
-export class EmptyCard extends MushroomBaseElement implements LovelaceCard {
+export class EmptyCard extends PlasmaBaseElement implements LovelaceCard {
   @property({ type: Boolean }) public preview = false;
 
   public static async getConfigElement(): Promise<LovelaceCardEditor> {

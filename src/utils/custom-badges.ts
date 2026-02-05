@@ -11,7 +11,7 @@ export function registerCustomBadge(params: RegisterBadgeParams) {
   };
   windowWithBadges.customBadges = windowWithBadges.customBadges || [];
 
-  const badgePage = params.type.replace("-badge", "").replace("mushroom-", "");
+  const badgePage = params.type.replace("-badge", "").replace("plasma-", "");
   windowWithBadges.customBadges.push({
     ...params,
     preview: true,

@@ -75,8 +75,8 @@ const SCHEMA = [
   },
 ] as const satisfies readonly HaFormSchema[];
 
-@customElement("mushroom-template-badge-editor")
-export class MushroomTemplateBadgeEditor
+@customElement("plasma-template-badge-editor")
+export class PlasmaTemplateBadgeEditor
   extends LitElement
   implements LovelaceBadgeEditor
 {
@@ -149,6 +149,6 @@ export class MushroomTemplateBadgeEditor
 
 declare global {
   interface HTMLElementTagNameMap {
-    "mushroom-template-badge-editor": MushroomTemplateBadgeEditor;
+    "plasma-template-badge-editor": PlasmaTemplateBadgeEditor;
   }
 }

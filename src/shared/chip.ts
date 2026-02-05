@@ -9,7 +9,7 @@ import {
 import { property, customElement } from "lit/decorators.js";
 import { animations } from "../utils/entity-styles";
 
-@customElement("mushroom-chip")
+@customElement("plasma-chip")
 export class Chip extends LitElement {
   @property() public icon: string = "";
 
