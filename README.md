@@ -6,7 +6,8 @@
 ![build][build-badge]
 > Based on the original [Mushroom](https://github.com/piitaya/lovelace-mushroom) by [piitaya](https://github.com/piitaya).
 
-![Overview](https://user-images.githubusercontent.com/5878303/152332130-760cf616-5c40-4825-a482-bb8f1f0f5251.png)
+<img width="853" height="257" alt="image" src="https://github.com/user-attachments/assets/68941aa7-60b3-4f8a-8ed4-9de690b30afd" />
+
 
 ## What is Plasma Template Card ?
 
@@ -26,7 +27,7 @@ The goal of Template Card is to provide a custom template card and badge for ult
 
 ## Installation
 
-### HACS
+### HACS (Easy Mode)
 
 Plasma Template Card is available in [HACS][hacs] (Home Assistant Community Store).
 
@@ -34,12 +35,16 @@ Use this link to directly go to the repository in HACS
 
 [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=plasmapod&repository=plasma-template-card)
 
-_or_
-
+### HACS (Manual Mode)
 1. Install HACS if you don't have it already
 2. Open HACS in Home Assistant
-3. Search for "Plasma Template Card"
-4. Click the download button. ⬇️
+3. Click the 3 dots in the top right corner.
+4. Click "Custom Repositories".
+5. For Repository type ``/PlasmaPod/plasma-template-card``
+6. For Type select "Dashboard
+7. Click "Add" then close the window
+8. Search for "Plasma Template Card"
+9. Click the download button. ⬇️
 
 ## Usage
 
