@@ -11,6 +11,6 @@ import "./cards/template-card/template-card";
 import "./badges/template/template-badge";
 
 console.info(
-  `%c🚀 Plasma 🚀 - ${version}`,
+  `%c🚀 Plasma Template Card 🚀 - ${version}`,
   "color: #ef5350; font-weight: 700;"
 );
