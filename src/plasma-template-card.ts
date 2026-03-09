@@ -1,9 +1,4 @@
 import { version } from "../package.json";
-import "./utils/form/custom/ha-selector-plasma-alignment";
-import "./utils/form/custom/ha-selector-plasma-color";
-import "./utils/form/custom/ha-selector-plasma-icon-type";
-import "./utils/form/custom/ha-selector-plasma-info";
-import "./utils/form/custom/ha-selector-plasma-layout";
 
 import "./cards/empty-card/empty-card";
 import "./cards/template-card/template-card";

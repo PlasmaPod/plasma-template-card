@@ -54,8 +54,8 @@ body:
           description: |
               examples:
                 - **Brower**: Chrome
-                - **HA Version**: 2022.11.0
-                - **Plasma Template Card**: 2.3.4
+                - **HA Version**: 2026.3.0
+                - **Plasma Template Card**: 2026.2
           value: |
               - Browser:
               - HA Version:

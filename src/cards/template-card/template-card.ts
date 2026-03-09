@@ -417,8 +417,6 @@ export class PlasmaTemplateCard extends LitElement implements LovelaceCard {
     });
 
     const { haVersion } = this.hass.connection;
-    const supportTileInfoSlot = atLeastHaVersion(haVersion, 2025, 10);
-
     const supportTileIconHandlerOptions = atLeastHaVersion(haVersion, 2026, 2);
 
     const iconActionHandlerOptions: ActionHandlerOptions = {
@@ -496,34 +494,15 @@ export class PlasmaTemplateCard extends LitElement implements LovelaceCard {
                   : nothing}
                 ${primary || secondary
                   ? html`
-                      <ha-tile-info
-                        id="info"
-                        .primary=${supportTileInfoSlot ? undefined : primary}
-                        .secondary=${supportTileInfoSlot
-                          ? undefined
-                          : html`
-                              <span
-                                style=${styleMap({
-                                  "white-space": multilineSecondary
-                                    ? "pre-wrap"
-                                    : "nowrap",
-                                })}
-                                >${secondary?.trim()}</span
-                              >
-                            `}
-                      >
-                        ${supportTileInfoSlot
-                          ? html`
-                              <span slot="primary">${primary}</span>
-                              <span
-                                slot="secondary"
-                                class=${classMap({
-                                  multiline: Boolean(multilineSecondary),
-                                })}
-                                >${secondary}</span
-                              >
-                            `
-                          : nothing}
+                      <ha-tile-info id="info">
+                        <span slot="primary">${primary}</span>
+                        <span
+                          slot="secondary"
+                          class=${classMap({
+                            multiline: Boolean(multilineSecondary),
+                          })}
+                          >${secondary}</span
+                        >
                       </ha-tile-info>
                     `
                   : nothing}

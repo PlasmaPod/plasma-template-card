@@ -1,19 +1,6 @@
 import { ActionConfig } from "../../ha";
-import { PlasmaAlignementSelector } from "./custom/ha-selector-plasma-alignment";
-import { PlasmaColorSelector } from "./custom/ha-selector-plasma-color";
-import { PlasmaIconTypeSelector } from "./custom/ha-selector-plasma-icon-type";
-import { PlasmaInfoSelector } from "./custom/ha-selector-plasma-info";
-import { PlasmaLayoutSelector } from "./custom/ha-selector-plasma-layout";
-
-type PlasmaSelector =
-  | PlasmaColorSelector
-  | PlasmaLayoutSelector
-  | PlasmaInfoSelector
-  | PlasmaIconTypeSelector
-  | PlasmaAlignementSelector;
 
 export type Selector =
-  | PlasmaSelector
   | ActionSelector
   | AddonSelector
   | AreaSelector
